@@ -6,7 +6,7 @@ const userRouter = require("./routes/v1/user.route")
 
 let server;
 
-mongoose.connect(config.mongoose.url)
+mongoose.connect(config.mongoose.url, config.mongoose.options)
 .then(()=>{
     console.log(`connected to DB at ${config.mongoose.url}`)   
     console.log("************************************************************************************************")
